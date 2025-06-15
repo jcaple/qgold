@@ -1,3 +1,3 @@
-./aws_server/.aws-sam/*
-./aws_server/.venv/*
-./aws_server/layer/*
+./aws_server/.aws-sam/
+./aws_server/.venv/
+./aws_server/layer/
