@@ -1,1 +1,0 @@
-{"statusCode": 200, "body": "{\"message\": \"Price data processing complete\", \"timestamp\": \"2025-06-16T13:39:56.768050\", \"successful\": [\"XAU\", \"XAG\", \"XPD\", \"HG\", \"BTC\", \"ETH\"], \"failed\": []}"}
