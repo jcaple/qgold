@@ -5,7 +5,7 @@ This project contains a serverless application that runs on a weekday schedule (
 ## Architecture
 
 - **AWS Lambda**: Executes code to fetch price data for multiple assets and store in DynamoDB
-- **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 12:00 PM UTC
+- **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 22:00 PM UTC
 - **DynamoDB**: Stores the retrieved price data with a date-based index for easy querying
 
 ## Tracked Assets
@@ -76,7 +76,7 @@ sam build
 sam deploy --guided
 ```
 
-3. During the guided deployment, you'll be prompted to provide:
+3. During the guided deployment, you'll be prompted to provide (or except defaults):
    - Stack name
    - AWS Region
    - API endpoint URL
