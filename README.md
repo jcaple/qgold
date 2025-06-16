@@ -164,7 +164,9 @@ This MCP (Model Context Protocol) server provides tools for retrieving currency 
 ```bash
 # Using pip
 pip install -r mcp_server/requirements.txt
+```
 
+```bash
 # Or using uv (faster)
 uv pip install -r mcp_server/requirements.txt
 ```
