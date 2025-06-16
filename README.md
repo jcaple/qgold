@@ -106,7 +106,7 @@ make deploy
 make test-quote-retrieval
 ```
 
-**Note**: when successful, this test should populate the DynamoDB with an initial record set.  Otherwise, the database will remain empty until the EventBridge schedule runs to execute the data loading lambda.
+**Note**: when successful, this test should populate the DynamoDB QGoldPriceDataTable table with an initial record set.  Otherwise, the database will remain empty until the EventBridge schedule runs to execute the data loading lambda.
 
 A successful response from the test should look like this:
 
