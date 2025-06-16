@@ -177,10 +177,13 @@ uv pip install -r mcp_server/requirements.txt
 
 ```
 q mcp add --name qgold --command python3
-vim .amazonq/mcp.json
 ```
 
-Edit mcp.json to look like this:
+Edit the mcp.json file to look like the below:
+
+```
+vim .amazonq/mcp.json
+```
 
 ```
 {
