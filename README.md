@@ -68,10 +68,12 @@ The data is stored in DynamoDB with the following structure:
 
 ## Project Dev Environment Prerequisites
 
+- Developed and Tested on Ubuntu 22.04 bash shell
 - An AWS Account
 - AWS CLI installed and configured
 - AWS SAM CLI installed
 - Python 3.10 or later (aliased as python3)
+- AWS Q CLI installed and developer account login
 
 ## QGold Lambda Deployment Instructions
 
@@ -199,6 +201,12 @@ vim .amazonq/mcp.json
 ```
 
 Run q cli like this:
+
+```
+q login
+```
+
+Then trust the MCP Server tool to start:
 
 ```
 q chat --trust-tools=qgold___get_asset_prices
