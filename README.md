@@ -73,7 +73,7 @@ pip3 install -r requirements.txt -t layer/python
 2. Deploy the application:
 ```
 sam build
-sam deploy --guided
+sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
 ```
 
 3. During the guided deployment, you'll be prompted to provide (or except defaults):

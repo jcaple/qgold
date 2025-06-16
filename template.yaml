@@ -32,13 +32,19 @@ Resources:
       TableName: !Ref TableName
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
-        - AttributeName: id
+        - AttributeName: name
           AttributeType: S
         - AttributeName: date
           AttributeType: S
-      KeySchema:
         - AttributeName: id
+          AttributeType: S
+        - AttributeName: asset_name
+          AttributeType: S
+      KeySchema:
+        - AttributeName: name
           KeyType: HASH
+        - AttributeName: date
+          KeyType: RANGE
       GlobalSecondaryIndexes:
         - IndexName: DateIndex
           KeySchema:
@@ -46,11 +52,26 @@ Resources:
               KeyType: HASH
           Projection:
             ProjectionType: ALL
+        - IndexName: IdIndex
+          KeySchema:
+            - AttributeName: id
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: AssetNameDateIndex
+          KeySchema:
+            - AttributeName: asset_name
+              KeyType: HASH
+            - AttributeName: date
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
 
   # Lambda Function
   ApiDataFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: qgold-api-data-function
       CodeUri: functions/quote_retrieval
       Description: Retrieve quotes from API and store in DynamoDB
       Handler: lambda_function.lambda_handler
@@ -73,12 +94,31 @@ Resources:
                 - 'logs:CreateLogStream'
                 - 'logs:PutLogEvents'
               Resource: '*'
+              
+  # Quote Analysis Lambda Function
+  QuoteAnalysisFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: qgold-quote-analysis-function
+      CodeUri: functions/quote_analysis
+      Description: Retrieve records from DynamoDB based on name and date range
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.10
+      Timeout: 30
+      MemorySize: 128
+      Environment:
+        Variables:
+          DYNAMODB_TABLE_NAME: !Ref TableName
+          LOG_LEVEL: !Ref LogLevel
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref ApiDataTable
 
   # EventBridge Schedule Rule (Monday to Friday)
   WeekdayScheduleRule:
     Type: AWS::Scheduler::Schedule
     Properties:
-      Name: WeekdayApiDataSchedule
+      Name: qgold-weekday-schedule
       Description: Schedule to trigger Lambda function on weekdays
       FlexibleTimeWindow:
         Mode: "OFF"
@@ -91,6 +131,7 @@ Resources:
   SchedulerExecutionRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: qgold-scheduler-execution-role
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -105,6 +146,9 @@ Outputs:
   ApiDataFunction:
     Description: API Data Lambda Function ARN
     Value: !GetAtt ApiDataFunction.Arn
+  QuoteAnalysisFunction:
+    Description: Quote Analysis Lambda Function ARN
+    Value: !GetAtt QuoteAnalysisFunction.Arn
   ApiDataTable:
     Description: DynamoDB Table Name
     Value: !Ref ApiDataTable

@@ -91,15 +91,17 @@ def lambda_handler(event, context):
                     record_id = str(uuid.uuid4())
                     
                     # Create the item to store in DynamoDB
+                    # Use name-date as a composite key to ensure uniqueness per day
                     item = {
                         'id': record_id,
-                        'name': price_data.get('name'),
+                        'name': price_data.get('name').lower() + "-" + execution_date,  # Composite key: name-date
                         'price': Decimal(str(price_data.get('price'))),  # Convert float to Decimal
                         'symbol': price_data.get('symbol'),
                         'sourceUpdatedAt': price_data.get('updatedAt'),
                         'sourceUpdatedAtReadable': price_data.get('updatedAtReadable'),
                         'recordedAt': execution_timestamp,
-                        'date': execution_date
+                        'date': execution_date,
+                        'asset_name': price_data.get('name').lower()  # Store original name for queries
                     }
                     
                     logger.info(f"Storing price record for {symbol} with ID: {record_id}")

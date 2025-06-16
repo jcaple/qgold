@@ -1,2 +1,17 @@
 test-quote-retrieval:
-	aws lambda invoke --function-name qgold-server-ApiDataFunction-SadYYO6PIS9Y --payload '{}' response.json
+	sam remote invoke qgold-api-data-function
+
+test-quote-analysis:
+	sam remote invoke qgold-quote-analysis-function --event-file functions/quote_analysis/tests/event.json
+
+deploy:
+	sam build
+	sam deploy --capabilities CAPABILITY_NAMED_IAM
+
+deploy-quote-retrieval:
+	sam build ApiDataFunction
+	sam deploy --capabilities CAPABILITY_NAMED_IAM
+
+deploy-quote-analysis:
+	sam build QuoteAnalysisFunction
+	sam deploy --capabilities CAPABILITY_NAMED_IAM

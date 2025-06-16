@@ -5,6 +5,6 @@ resolve_s3 = true
 s3_prefix = "qgold-server"
 region = "us-east-1"
 confirm_changeset = true
-capabilities = "CAPABILITY_IAM"
+capabilities = "CAPABILITY_NAMED_IAM"
 parameter_overrides = "ApiEndpointBase=\"https://api.gold-api.com/price\" TableName=\"QGoldPriceDataTable\" LogLevel=\"DEBUG\""
 image_repositories = []
