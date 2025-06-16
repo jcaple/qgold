@@ -73,7 +73,7 @@ The data is stored in DynamoDB with the following structure:
 - AWS SAM CLI installed
 - Python 3.10 or later (aliased as python3)
 
-## Lambda Deployment Instructions
+## QGold Lambda Deployment Instructions
 
 The lambda functions live in the 'functions' directory.
 
