@@ -137,3 +137,29 @@ To remove all resources created by this application:
 ```
 sam delete
 ```
+
+# MCP Server
+
+The MCP Server provides a toolkit for LLM's (like Q) to leverage for querying and analyzing the prices of metals and digital currency collected by this application.
+
+## Setup
+
+### Create a virtual environment
+
+```
+uv venv
+```
+
+### Activate the virtual environment
+
+```
+source .venv/bin/activate  # On Linux/macOS
+# or
+# .venv\Scripts\activate  # On Windows
+```
+
+### Install dependencies for the MCP server
+
+```
+uv pip install -r mcp_server/requirements.txt
+```

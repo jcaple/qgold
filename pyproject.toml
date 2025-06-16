@@ -1,7 +1,0 @@
-[project]
-name = "qgold"
-version = "0.1.0"
-description = "Gold price collection and analysis"
-readme = "README.md"
-requires-python = ">=3.10"
-dependencies = []

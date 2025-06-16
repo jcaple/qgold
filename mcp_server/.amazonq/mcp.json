@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "qgold": {
+      "command": "python3",
+      "args": ["server.py"]
+    }
+  }
+}
