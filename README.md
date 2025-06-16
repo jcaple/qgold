@@ -44,7 +44,8 @@ The data is stored in DynamoDB with the following structure:
 ```json
 {
   "id": "uuid-generated-for-record",
-  "name": "Gold",
+  "name": "gold-2025-06-14",  // Composite key of asset name and date
+  "asset_name": "gold",       // Original asset name in lowercase for querying
   "price": 3433.399902,
   "symbol": "XAU",
   "sourceUpdatedAt": "2025-06-14T22:54:24Z",
@@ -53,6 +54,15 @@ The data is stored in DynamoDB with the following structure:
   "date": "2025-06-14"
 }
 ```
+
+The table uses a composite primary key:
+- Hash key: `name` (format: "{asset_name}-{date}")
+- Range key: `date`
+
+And includes these secondary indexes:
+- `DateIndex`: For querying by date
+- `IdIndex`: For querying by record ID
+- `AssetNameDateIndex`: For querying by asset name and date range
 
 ## Deployment Instructions
 
@@ -63,24 +73,51 @@ The data is stored in DynamoDB with the following structure:
 
 ### Steps to Deploy
 
-1. Install dependencies:
-```
-uv venv
-source ./.venv/bin/activate
-pip3 install -r requirements.txt -t layer/python
-```
+1. Deploy the application:
 
-2. Deploy the application:
 ```
 sam build
 sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
 ```
 
-3. During the guided deployment, you'll be prompted to provide (or except defaults):
+The Makefile will also allow you to use this command to build and deploy:
+
+```
+make deploy
+```
+
+2. During the guided deployment, you'll be prompted to provide (or except defaults):
    - Stack name
    - AWS Region
    - API endpoint URL
    - DynamoDB table name
+
+3.  Verify Deployment
+
+```
+make test-quote-retrieval
+```
+
+A successful response should look like this:
+
+```
+{
+	"statusCode": 200,
+	"body": "{\"message\": \"Price data processing complete\", \"timestamp\": \"2025-06-16T16:14:30.379948\", \"successful\": [\"XAU\", \"XAG\", \"XPD\", \"HG\", \"BTC\", \"ETH\"], \"failed\": []}"
+}
+```
+
+To ensure the quote analysis function is working, run the following test:
+
+```
+make test-quote-analysis
+```
+
+The expected response should look like this:
+
+```
+{"statusCode": 200, "body": "{\"count\": 1, \"items\": [{\"date\": \"2025-06-16\", \"symbol\": \"XAU\", \"sourceUpdatedAtReadable\": \"a few seconds ago\", \"asset_name\": \"gold\", \"sourceUpdatedAt\": \"2025-06-16T16:14:27Z\", \"price\": 3401.129883, \"id\": \"330cfe64-64e9-4f75-b930-dc163b4c5ebf\", \"recordedAt\": \"2025-06-16T16:14:30.379948\", \"name\": \"gold-2025-06-16\"}]}"}
+```
 
 ## Configuration
 
