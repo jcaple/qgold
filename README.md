@@ -1,16 +1,24 @@
-# Price Tracker Lambda
+# QGold
 
-This project contains a serverless application that runs on a weekday schedule (Monday-Friday) to fetch price data for multiple assets from an API and store it in DynamoDB.
+This project provides an MCP Server that can be plugged in to LLM tools, like the Q CLI, for natural language questions related to the price performance of certain metal and digital currency assets, like gold, silver and bitcoin, over time.
 
 ## Architecture
 
-- **AWS Lambda**: Executes code to fetch price data for multiple assets and store in DynamoDB
-- **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 22:00 PM UTC
+- **AWS Lambda**: Executes code to fetch price data for multiple assets and stores in DynamoDB
+- **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 22:00 PM UTC/6pm EST
 - **DynamoDB**: Stores the retrieved price data with a date-based index for easy querying
+- **Q CLI**: Uses this MCP Server as a cli tool to learn about asset prices stored in DynamoDB
+
+The 'functions' directory contains the AWS lambda functions.
+
+The 'mcp_server' directory contains the MCP server to be used in the AWS Q CLI.
+
+The Makefile consolidates some helpful commands for building and testing the lambda functions.
 
 ## Tracked Assets
 
 The Lambda function fetches price data for the following assets:
+
 - XAU (Gold)
 - XAG (Silver)
 - XPD (Palladium)
@@ -20,7 +28,8 @@ The Lambda function fetches price data for the following assets:
 
 ## API Endpoint
 
-The Lambda function makes requests to the following API endpoint for each asset:
+The Lambda function makes requests to the following API endpoint for each asset price:
+
 ```
 https://api.gold-api.com/price/{symbol}
 ```
@@ -30,6 +39,7 @@ Where `{symbol}` is replaced with each asset symbol (XAU, XAG, XPD, HG, BTC, ETH
 ## Data Structure
 
 The Lambda function expects the API to return price data in the following format:
+
 ```json
 {
   "name": "Gold",
@@ -41,6 +51,7 @@ The Lambda function expects the API to return price data in the following format
 ```
 
 The data is stored in DynamoDB with the following structure:
+
 ```json
 {
   "id": "uuid-generated-for-record",
@@ -55,38 +66,35 @@ The data is stored in DynamoDB with the following structure:
 }
 ```
 
-The table uses a composite primary key:
-- Hash key: `name` (format: "{asset_name}-{date}")
-- Range key: `date`
+## Project Dev Environment Prerequisites
 
-And includes these secondary indexes:
-- `DateIndex`: For querying by date
-- `IdIndex`: For querying by record ID
-- `AssetNameDateIndex`: For querying by asset name and date range
-
-## Deployment Instructions
-
-### Prerequisites
+- An AWS Account
 - AWS CLI installed and configured
 - AWS SAM CLI installed
-- Python 3.10 or later
+- Python 3.10 or later (aliased as python3)
+
+## Lambda Deployment Instructions
+
+The lambda functions live in the 'functions' directory.
 
 ### Steps to Deploy
 
 1. Deploy the application:
+
+To deploy using the sam cli and the template.yaml CloudFormation template provided:
 
 ```
 sam build
 sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
 ```
 
-The Makefile will also allow you to use this command to build and deploy:
+The included Makefile will also allow you to use these commands to build and deploy:
 
 ```
 make deploy
 ```
 
-2. During the guided deployment, you'll be prompted to provide (or except defaults):
+2. During the guided deployment, you'll be prompted to provide (or accept defaults):
    - Stack name
    - AWS Region
    - API endpoint URL
@@ -98,7 +106,9 @@ make deploy
 make test-quote-retrieval
 ```
 
-A successful response should look like this:
+**Note**: when successful, this test should populate the DynamoDB with an initial record set.  Otherwise, the database will remain empty until the EventBridge schedule runs to execute the data loading lambda.
+
+A successful response from the test should look like this:
 
 ```
 {
@@ -107,7 +117,7 @@ A successful response should look like this:
 }
 ```
 
-To ensure the quote analysis function is working, run the following test:
+To ensure the quote analysis lambda function is working, run the following test:
 
 ```
 make test-quote-analysis
@@ -126,40 +136,177 @@ You can modify the following parameters:
 - `TableName`: The name of the DynamoDB table
 - `LogLevel`: The logging level for the Lambda function (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
+However, it is probably best to just leave these alone.
+
 ## Customization
 
 - To change the schedule, modify the `ScheduleExpression` in the `WeekdayScheduleRule` resource in `template.yaml`
 - To modify the data processing logic, update the `lambda_function.py` file
 
+The DynamoDB indexes are setup such that the data is updated daily (as opposed to taking into account time as well).
+
 ## Cleanup
 
 To remove all resources created by this application:
+
 ```
 sam delete
 ```
 
-# MCP Server
+## QGold MCP Server
 
-The MCP Server provides a toolkit for LLM's (like Q) to leverage for querying and analyzing the prices of metals and digital currency collected by this application.
+This MCP (Model Context Protocol) server provides tools for retrieving currency price information from the QGold Lambda functions.
 
-## Setup
+### Setup
 
-### Create a virtual environment
+#### Install dependencies:
 
-```
-uv venv
-```
+```bash
+# Using pip
+pip install -r mcp_server/requirements.txt
 
-### Activate the virtual environment
-
-```
-source .venv/bin/activate  # On Linux/macOS
-# or
-# .venv\Scripts\activate  # On Windows
-```
-
-### Install dependencies for the MCP server
-
-```
+# Or using uv (faster)
 uv pip install -r mcp_server/requirements.txt
+```
+
+### Using The MCP Server In Q Cli
+
+#### Add MCP Server
+
+```
+q mcp add --name qgold --command python3
+vim .amazonq/mcp.json
+```
+
+Edit mcp.json to look like this:
+
+```
+{
+  "mcpServers": {
+    "qgold": {
+      "command": "python3",
+      "args": ["server.py"]
+    }
+  }
+}
+```
+
+Run q cli like this:
+
+```
+q chat --trust-tools=qgold___get_asset_prices
+```
+
+### get_asset_prices
+
+Retrieves currency price information using specified date ranges.
+
+**Parameters:**
+- `name` (required): The name of the currency (e.g., gold, silver)
+- `start_date` (optional): Start date in YYYY-MM-DD format
+- `end_date` (optional): End date in YYYY-MM-DD format
+
+### Sample Chat Sessions
+
+```
+> what about today's copper price
+Let me check the current price of copper for you.
+
+
+🛠️  Using tool: get_asset_prices (trusted) from mcp server qgold
+ ⋮ 
+ ● Running get_asset_prices with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "name": "copper"
+ ⋮    },
+ ⋮    "name": "get_asset_prices"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.66s
+Based on the latest data, the current price of copper is $4.41 per pound as of June 16, 2025. This price was last updated just a few seconds ago at 16:14:28 UTC today.
+
+> What are the prices of XAG today?
+I'll help you check the current price of silver (XAG) today.
+
+
+🛠️  Using tool: get_asset_prices (trusted) from mcp server qgold
+ ⋮ 
+ ● Running get_asset_prices with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "name": "silver"
+ ⋮    },
+ ⋮    "name": "get_asset_prices"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.51s
+Based on the latest data, the current price of silver (XAG) is $36.42 per troy ounce as of June 16, 2025. This price was last updated just a few seconds ago at 16:14:26 UTC today.
+
+> what are today's prices for gold, silver, copper and btc?
+I'll retrieve the current prices for gold, silver, copper, and bitcoin for you.
+
+
+🛠️  Using tool: get_asset_prices (trusted) from mcp server qgold
+ ⋮ 
+ ● Running get_asset_prices with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "name": "gold"
+ ⋮    },
+ ⋮    "name": "get_asset_prices"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.74s
+
+
+
+🛠️  Using tool: get_asset_prices (trusted) from mcp server qgold
+ ⋮ 
+ ● Running get_asset_prices with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "name": "silver"
+ ⋮    },
+ ⋮    "name": "get_asset_prices"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.54s
+
+
+
+🛠️  Using tool: get_asset_prices (trusted) from mcp server qgold
+ ⋮ 
+ ● Running get_asset_prices with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "name": "copper"
+ ⋮    },
+ ⋮    "name": "get_asset_prices"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.62s
+
+
+
+🛠️  Using tool: get_asset_prices (trusted) from mcp server qgold
+ ⋮ 
+ ● Running get_asset_prices with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "name": "bitcoin"
+ ⋮    },
+ ⋮    "name": "get_asset_prices"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.44s
+Here are today's prices for all the assets you requested (June 16, 2025):
+
+• Gold (XAU): $3,401.13 per troy ounce
+• Silver (XAG): $36.42 per troy ounce
+• Copper (HG): $4.41 per pound
+• Bitcoin (BTC): $107,604.82
+
+All prices were last updated just a few seconds ago, around 16:14 UTC today.
+
 ```
