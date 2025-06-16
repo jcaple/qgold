@@ -175,6 +175,8 @@ uv pip install -r mcp_server/requirements.txt
 
 #### Add MCP Server
 
+Run the following commands inside the mcp_server directory:
+
 ```
 q mcp add --name qgold --command python3
 ```
