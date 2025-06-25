@@ -209,7 +209,7 @@ q login
 Then trust the MCP Server tool to start:
 
 ```
-q chat --trust-tools=qgold___get_asset_prices
+q chat --trust-tools=qgold___get_asset_prices,qgold___model_financial_projections
 ```
 
 ### get_asset_prices
@@ -324,4 +324,71 @@ Here are today's prices for all the assets you requested (June 16, 2025):
 
 All prices were last updated just a few seconds ago, around 16:14 UTC today.
 
+```
+
+The following is an example of using the **model_financial_projections** tool to simulate a 4% withdrawl from a savings nest egg in a potential retirement scenario:
+
+```
+> Model the withdraw scenarios over 30 years with a starting principal amount of $800k with random annual growth.  If there is negative growth in a year, do not withdraw funds the following year.  Print the results in a table.
+I'll model the withdrawal scenarios over 30 years with your specifications. Let me use the financial projection tool to calculate this.
+
+
+🛠️  Using tool: model_financial_projections (trusted) from mcp server qgold
+ ⋮ 
+ ● Running model_financial_projections with the param:
+ ⋮  {
+ ⋮    "arguments": {
+ ⋮      "growth_rate": 7,
+ ⋮      "initial_amount": 800000,
+ ⋮      "skip_withdrawal_after_loss": true,
+ ⋮      "use_random_growth": true,
+ ⋮      "withdrawal_rate": 4
+ ⋮    },
+ ⋮    "name": "model_financial_projections"
+ ⋮  }
+ ⋮ 
+ ● Completed in 0.2s
+## 30-Year Financial Projection with Random Growth
+
+Here's the 30-year financial projection with an initial amount of $800,000, using random annual growth rates and skipping withdrawals after years with negative growth:
+
+| Year | Starting Balance | Withdrawal | Balance After Withdrawal | Growth Rate | Growth Amount | Ending Balance |
+|------|------------------|------------|--------------------------|-------------|---------------|----------------|
+| 1    | $800,000.00      | $32,000.00 | $768,000.00              | 13.71%      | $105,294.45   | $873,294.45    |
+| 2    | $873,294.45      | $34,931.78 | $838,362.67              | 3.54%       | $29,645.90    | $868,008.57    |
+| 3    | $868,008.57      | $34,720.34 | $833,288.23              | -2.38%      | -$19,796.44   | $813,491.79    |
+| 4    | $813,491.79      | $0.00      | $813,491.79              | 24.22%      | $197,055.96   | $1,010,547.75  |
+| 5    | $1,010,547.75    | $40,421.91 | $970,125.84              | -14.24%     | -$138,175.17  | $831,950.67    |
+| 6    | $831,950.67      | $0.00      | $831,950.67              | 6.07%       | $50,496.12    | $882,446.79    |
+| 7    | $882,446.79      | $35,297.87 | $847,148.91              | -5.88%      | -$49,808.19   | $797,340.73    |
+| 8    | $797,340.73      | $0.00      | $797,340.73              | -24.15%     | -$192,590.29  | $604,750.44    |
+| 9    | $604,750.44      | $0.00      | $604,750.44              | 4.38%       | $26,503.18    | $631,253.62    |
+| 10   | $631,253.62      | $25,250.14 | $606,003.48              | 15.50%      | $93,921.36    | $699,924.84    |
+| 11   | $699,924.84      | $27,996.99 | $671,927.85              | -21.06%     | -$141,486.30  | $530,441.55    |
+| 12   | $530,441.55      | $0.00      | $530,441.55              | -18.77%     | -$99,585.47   | $430,856.09    |
+| 13   | $430,856.09      | $0.00      | $430,856.09              | 4.13%       | $17,785.55    | $448,641.63    |
+| 14   | $448,641.63      | $17,945.67 | $430,695.97              | -7.99%      | -$34,415.90   | $396,280.07    |
+| 15   | $396,280.07      | $0.00      | $396,280.07              | 31.36%      | $124,291.45   | $520,571.52    |
+| 16   | $520,571.52      | $20,822.86 | $499,748.66              | -11.07%     | -$55,325.43   | $444,423.22    |
+| 17   | $444,423.22      | $0.00      | $444,423.22              | 6.62%       | $29,419.11    | $473,842.34    |
+| 18   | $473,842.34      | $18,953.69 | $454,888.64              | 3.92%       | $17,808.92    | $472,697.56    |
+| 19   | $472,697.56      | $18,907.90 | $453,789.66              | -13.34%     | -$60,545.00   | $393,244.66    |
+| 20   | $393,244.66      | $0.00      | $393,244.66              | 7.64%       | $30,036.21    | $423,280.87    |
+| 21   | $423,280.87      | $16,931.23 | $406,349.64              | 1.75%       | $7,127.53     | $413,477.16    |
+| 22   | $413,477.16      | $16,539.09 | $396,938.08              | 11.25%      | $44,642.72    | $441,580.80    |
+| 23   | $441,580.80      | $17,663.23 | $423,917.57              | 3.50%       | $14,824.10    | $438,741.67    |
+| 24   | $438,741.67      | $17,549.67 | $421,192.01              | 5.43%       | $22,878.99    | $444,070.99    |
+| 25   | $444,070.99      | $17,762.84 | $426,308.15              | 5.90%       | $25,141.68    | $451,449.84    |
+| 26   | $451,449.84      | $18,057.99 | $433,391.84              | -21.56%     | -$93,442.92   | $339,948.92    |
+| 27   | $339,948.92      | $0.00      | $339,948.92              | 8.91%       | $30,295.74    | $370,244.66    |
+| 28   | $370,244.66      | $14,809.79 | $355,434.87              | 1.30%       | $4,631.10     | $360,065.97    |
+| 29   | $360,065.97      | $14,402.64 | $345,663.34              | 16.63%      | $57,498.45    | $403,161.79    |
+| 30   | $403,161.79      | $16,126.47 | $387,035.32              | -0.02%      | -$91.53       | $386,943.79    |
+
+### Summary:
+• Initial amount: $800,000.00
+• Final balance after 30 years: $386,943.79
+• Total withdrawals over 30 years: $457,092.10
+
+Note that in years following negative growth (years 4, 6, 8, 9, 12, 13, 15, 17, 20, and 27), no withdrawals were made as specified in your requirements. The model used a 4% withdrawal rate in years when withdrawals were permitted.
 ```
