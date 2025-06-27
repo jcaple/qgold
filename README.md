@@ -7,8 +7,8 @@ This project provides an MCP Server that can be plugged in to LLM tools, like th
 ![alt text](arch-diagram.png "QGold Architecture")
 
 - **AWS Lambda**: 
-  -- **qgold-api-data-function**: Executes code to fetch price data for multiple assets and stores in DynamoDB
-  -- **qgold-quote-analysis-function**: The MCP Lambda proxy responsible for retrieving data from DynamoDB for analysis
+  - **qgold-api-data-function**: Executes code to fetch price data for multiple assets and stores in DynamoDB
+  - **qgold-quote-analysis-function**: The MCP Lambda proxy responsible for retrieving data from DynamoDB for analysis
 - **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 22:00 PM UTC/5pm EST
 - **DynamoDB**: Stores the retrieved price data with a date-based index for easy querying
 - **Q CLI**: LLM client for MCP Server as a nlp tool for learning about asset prices stored in DynamoDB
@@ -85,7 +85,7 @@ The lambda functions live in the 'functions' directory.
 
 ### Steps to Deploy
 
-1. Deploy the application:
+1. Deploy the AWS application using sam:
 
 To deploy using the sam cli and the template.yaml CloudFormation template provided:
 
