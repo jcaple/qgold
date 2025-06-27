@@ -135,7 +135,7 @@ The expected response should look like this:
 {"statusCode": 200, "body": "{\"count\": 1, \"items\": [{\"date\": \"2025-06-16\", \"symbol\": \"XAU\", \"sourceUpdatedAtReadable\": \"a few seconds ago\", \"asset_name\": \"gold\", \"sourceUpdatedAt\": \"2025-06-16T16:14:27Z\", \"price\": 3401.129883, \"id\": \"330cfe64-64e9-4f75-b930-dc163b4c5ebf\", \"recordedAt\": \"2025-06-16T16:14:30.379948\", \"name\": \"gold-2025-06-16\"}]}"}
 ```
 
-## Configuration
+#### Configuration
 
 You can modify the following parameters:
 - `ApiEndpointBase`: The base URL of the API to fetch data from (https://api.gold-api.com/price)
@@ -144,14 +144,14 @@ You can modify the following parameters:
 
 However, it is probably best to just leave these alone.
 
-## Customization
+#### Customization
 
 - To change the schedule, modify the `ScheduleExpression` in the `WeekdayScheduleRule` resource in `template.yaml`
 - To modify the data processing logic, update the `lambda_function.py` file
 
 The DynamoDB indexes are setup such that the data is updated daily (as opposed to taking into account time as well).
 
-## Cleanup
+#### Cleanup
 
 To remove all resources created by this application:
 
@@ -216,7 +216,7 @@ Then trust the MCP Server tool to start:
 q chat --trust-tools=qgold___get_asset_prices,qgold___model_financial_projections
 ```
 
-### get_asset_prices
+#### get_asset_prices
 
 Retrieves currency price information using specified date ranges.
 
@@ -225,7 +225,7 @@ Retrieves currency price information using specified date ranges.
 - `start_date` (optional): Start date in YYYY-MM-DD format
 - `end_date` (optional): End date in YYYY-MM-DD format
 
-### Sample Chat Sessions
+##### Sample Chat Sessions
 
 ```
 > what about today's copper price
@@ -330,7 +330,7 @@ All prices were last updated just a few seconds ago, around 16:14 UTC today.
 
 ```
 
-### model_financial_projections
+#### model_financial_projections
 
 This MCP tool was just scratching an itch.  It helps to provide some idea of annual growth of a principal amount over a 30 year period, as well as what the impact of certain withdrawl rates versus growth rates might affect that principal over the same period.  The tool also allows you to simulate random growth interest rates over the thirty year period as well for, perhaps, a more 'Chaos Monkeys' look at possible money scenarios.
 
@@ -402,3 +402,8 @@ Here's the 30-year financial projection with an initial amount of $800,000, usin
 
 Note that in years following negative growth (years 4, 6, 8, 9, 12, 13, 15, 17, 20, and 27), no withdrawals were made as specified in your requirements. The model used a 4% withdrawal rate in years when withdrawals were permitted.
 ```
+
+## Author & License
+
+* Author: James Caple
+* License: [MIT](LICENSE)
