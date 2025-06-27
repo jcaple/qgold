@@ -15,3 +15,6 @@ deploy-quote-retrieval:
 deploy-quote-analysis:
 	sam build QuoteAnalysisFunction
 	sam deploy --capabilities CAPABILITY_NAMED_IAM
+
+seed-db:
+	aws dynamodb batch-write-item --request-items file://seed/dynamodb_bkup.json

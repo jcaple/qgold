@@ -1,0 +1,1573 @@
+{
+    "Items": [
+        {
+            "date": {
+                "S": "2025-06-16"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-16T22:00:27Z"
+            },
+            "price": {
+                "N": "2652.030029"
+            },
+            "id": {
+                "S": "22e0b700-c54b-4017-a16c-0b70def4098f"
+            },
+            "recordedAt": {
+                "S": "2025-06-16T22:00:51.357341"
+            },
+            "name": {
+                "S": "ethereum-2025-06-16"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-18"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-18T22:00:28Z"
+            },
+            "price": {
+                "N": "36.772999"
+            },
+            "id": {
+                "S": "9a4d8af0-356d-4960-9644-c4d187f879f5"
+            },
+            "recordedAt": {
+                "S": "2025-06-18T22:00:51.709721"
+            },
+            "name": {
+                "S": "silver-2025-06-18"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-16"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-16T22:00:27Z"
+            },
+            "price": {
+                "N": "108579.742188"
+            },
+            "id": {
+                "S": "8d00e76a-1ffd-4194-9b5e-5ee54fe064b7"
+            },
+            "recordedAt": {
+                "S": "2025-06-16T22:00:51.357341"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-16"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-19"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-19T22:00:31Z"
+            },
+            "price": {
+                "N": "1058"
+            },
+            "id": {
+                "S": "01de9394-f634-45c0-845b-dfdb1d70838d"
+            },
+            "recordedAt": {
+                "S": "2025-06-19T22:00:51.731754"
+            },
+            "name": {
+                "S": "palladium-2025-06-19"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-24"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-24T22:00:21Z"
+            },
+            "price": {
+                "N": "35.971001"
+            },
+            "id": {
+                "S": "5075a9bb-76ea-43d0-b295-847e3d255c5f"
+            },
+            "recordedAt": {
+                "S": "2025-06-24T22:00:51.417356"
+            },
+            "name": {
+                "S": "silver-2025-06-24"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-17"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-17T22:00:29Z"
+            },
+            "price": {
+                "N": "104492.0625"
+            },
+            "id": {
+                "S": "c694182a-c64a-49b5-82be-03f02bc0ae39"
+            },
+            "recordedAt": {
+                "S": "2025-06-17T22:00:51.423424"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-17"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-26"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-26T22:00:47Z"
+            },
+            "price": {
+                "N": "36.695"
+            },
+            "id": {
+                "S": "8217e401-26e2-42e1-b520-49227e390eaa"
+            },
+            "recordedAt": {
+                "S": "2025-06-26T22:00:51.545196"
+            },
+            "name": {
+                "S": "silver-2025-06-26"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-26"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-26T22:00:48Z"
+            },
+            "price": {
+                "N": "3328.600098"
+            },
+            "id": {
+                "S": "91a21628-71e6-48af-9d57-88f3d86feb41"
+            },
+            "recordedAt": {
+                "S": "2025-06-26T22:00:51.545196"
+            },
+            "name": {
+                "S": "gold-2025-06-26"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-18"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-18T22:00:29Z"
+            },
+            "price": {
+                "N": "105151.492188"
+            },
+            "id": {
+                "S": "bc90939e-83df-43d0-8c87-556e97cd2431"
+            },
+            "recordedAt": {
+                "S": "2025-06-18T22:00:51.709721"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-18"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-17"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-17T22:00:28Z"
+            },
+            "price": {
+                "N": "37.148998"
+            },
+            "id": {
+                "S": "fa89ab11-b7ce-47e3-884b-49463e785131"
+            },
+            "recordedAt": {
+                "S": "2025-06-17T22:00:51.423424"
+            },
+            "name": {
+                "S": "silver-2025-06-17"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-16"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-16T22:00:26Z"
+            },
+            "price": {
+                "N": "3385.26001"
+            },
+            "id": {
+                "S": "8d66f7a6-b9a8-482e-b262-8ac66751955e"
+            },
+            "recordedAt": {
+                "S": "2025-06-16T22:00:51.357341"
+            },
+            "name": {
+                "S": "gold-2025-06-16"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-17"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-17T22:00:31Z"
+            },
+            "price": {
+                "N": "1068"
+            },
+            "id": {
+                "S": "24a37a00-aeb5-4ab1-b99b-9b5c8e9b26d5"
+            },
+            "recordedAt": {
+                "S": "2025-06-17T22:00:51.423424"
+            },
+            "name": {
+                "S": "palladium-2025-06-17"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-25"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-25T22:00:49Z"
+            },
+            "price": {
+                "N": "4.499107"
+            },
+            "id": {
+                "S": "fb0d0a2e-11ff-4b8c-8313-ef7dd57166c9"
+            },
+            "recordedAt": {
+                "S": "2025-06-25T22:00:51.437024"
+            },
+            "name": {
+                "S": "copper-2025-06-25"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-25"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-25T22:00:48Z"
+            },
+            "price": {
+                "N": "107513.140625"
+            },
+            "id": {
+                "S": "772d144a-d7d8-4d1c-953b-748500dc1979"
+            },
+            "recordedAt": {
+                "S": "2025-06-25T22:00:51.437024"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-25"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-24"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-24T22:00:23Z"
+            },
+            "price": {
+                "N": "1086"
+            },
+            "id": {
+                "S": "7aae65db-899b-440b-8c1f-73e05343b87f"
+            },
+            "recordedAt": {
+                "S": "2025-06-24T22:00:51.417356"
+            },
+            "name": {
+                "S": "palladium-2025-06-24"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-19"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-19T22:00:31Z"
+            },
+            "price": {
+                "N": "2508.060059"
+            },
+            "id": {
+                "S": "e5c2a532-2fdf-4534-925b-7e4eb9e99307"
+            },
+            "recordedAt": {
+                "S": "2025-06-19T22:00:51.731754"
+            },
+            "name": {
+                "S": "ethereum-2025-06-19"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-18"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-18T22:00:28Z"
+            },
+            "price": {
+                "N": "3369.600098"
+            },
+            "id": {
+                "S": "1fc145d3-8058-49d6-8e60-03d9ee57dc55"
+            },
+            "recordedAt": {
+                "S": "2025-06-18T22:00:51.709721"
+            },
+            "name": {
+                "S": "gold-2025-06-18"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-24"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-24T22:00:22Z"
+            },
+            "price": {
+                "N": "106049.742188"
+            },
+            "id": {
+                "S": "dae85079-7064-4800-b372-a04df5e44824"
+            },
+            "recordedAt": {
+                "S": "2025-06-24T22:00:51.417356"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-24"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-20"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-20T22:00:30Z"
+            },
+            "price": {
+                "N": "103577.203125"
+            },
+            "id": {
+                "S": "bcddf0fc-8a0f-4b13-8602-01a4650ef421"
+            },
+            "recordedAt": {
+                "S": "2025-06-20T22:00:51.707351"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-20"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-17"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-17T22:00:29Z"
+            },
+            "price": {
+                "N": "2517.709961"
+            },
+            "id": {
+                "S": "ae29b2bf-78fb-420e-89cd-eee0e26ed591"
+            },
+            "recordedAt": {
+                "S": "2025-06-17T22:00:51.423424"
+            },
+            "name": {
+                "S": "ethereum-2025-06-17"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-25"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-25T22:00:49Z"
+            },
+            "price": {
+                "N": "1086"
+            },
+            "id": {
+                "S": "c2a32a62-796b-4a07-ab60-83d24d2354a8"
+            },
+            "recordedAt": {
+                "S": "2025-06-25T22:00:51.437024"
+            },
+            "name": {
+                "S": "palladium-2025-06-25"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-23"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-23T22:00:20Z"
+            },
+            "price": {
+                "N": "2342.689941"
+            },
+            "id": {
+                "S": "ce8a311c-d15a-4c28-bbb2-33aef6253df8"
+            },
+            "recordedAt": {
+                "S": "2025-06-23T22:00:51.341767"
+            },
+            "name": {
+                "S": "ethereum-2025-06-23"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-17"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-17T22:00:31Z"
+            },
+            "price": {
+                "N": "4.427305"
+            },
+            "id": {
+                "S": "00435716-20ae-43a1-8a11-75a23c15734f"
+            },
+            "recordedAt": {
+                "S": "2025-06-17T22:00:51.423424"
+            },
+            "name": {
+                "S": "copper-2025-06-17"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-20"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-20T22:00:30Z"
+            },
+            "price": {
+                "N": "3369.090088"
+            },
+            "id": {
+                "S": "1dba35fc-016a-47b2-ac96-1443fc84de4a"
+            },
+            "recordedAt": {
+                "S": "2025-06-20T22:00:51.707351"
+            },
+            "name": {
+                "S": "gold-2025-06-20"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-16"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-16T22:00:28Z"
+            },
+            "price": {
+                "N": "4.414641"
+            },
+            "id": {
+                "S": "a9551640-6904-4392-971a-ff5e0de509f5"
+            },
+            "recordedAt": {
+                "S": "2025-06-16T22:00:51.357341"
+            },
+            "name": {
+                "S": "copper-2025-06-16"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-24"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-24T22:00:23Z"
+            },
+            "price": {
+                "N": "2445.560059"
+            },
+            "id": {
+                "S": "790e5374-507f-49f1-bcf4-4e0eedd37ffc"
+            },
+            "recordedAt": {
+                "S": "2025-06-24T22:00:51.417356"
+            },
+            "name": {
+                "S": "ethereum-2025-06-24"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-19"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-19T22:00:32Z"
+            },
+            "price": {
+                "N": "4.419562"
+            },
+            "id": {
+                "S": "fa0eb42a-d7a6-4553-a9ec-ffc78417b886"
+            },
+            "recordedAt": {
+                "S": "2025-06-19T22:00:51.731754"
+            },
+            "name": {
+                "S": "copper-2025-06-19"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-19"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-19T22:00:29Z"
+            },
+            "price": {
+                "N": "36.5"
+            },
+            "id": {
+                "S": "8b7d01a0-60dd-4c4d-9639-c93533ea8dfc"
+            },
+            "recordedAt": {
+                "S": "2025-06-19T22:00:51.731754"
+            },
+            "name": {
+                "S": "silver-2025-06-19"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-25"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-25T22:00:46Z"
+            },
+            "price": {
+                "N": "36.310001"
+            },
+            "id": {
+                "S": "d26dedbe-78ab-49e6-ae8d-fc2865858167"
+            },
+            "recordedAt": {
+                "S": "2025-06-25T22:00:51.437024"
+            },
+            "name": {
+                "S": "silver-2025-06-25"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-24"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-24T22:00:22Z"
+            },
+            "price": {
+                "N": "3324.899902"
+            },
+            "id": {
+                "S": "ebf2198a-3c80-4a4e-ba4b-31097181e94b"
+            },
+            "recordedAt": {
+                "S": "2025-06-24T22:00:51.417356"
+            },
+            "name": {
+                "S": "gold-2025-06-24"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-17"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-17T22:00:28Z"
+            },
+            "price": {
+                "N": "3388.75"
+            },
+            "id": {
+                "S": "36d4d9d7-fb39-4960-ba66-b631b7118355"
+            },
+            "recordedAt": {
+                "S": "2025-06-17T22:00:51.423424"
+            },
+            "name": {
+                "S": "gold-2025-06-17"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-16"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-16T22:00:26Z"
+            },
+            "price": {
+                "N": "36.358002"
+            },
+            "id": {
+                "S": "3b67c67f-d8af-4979-80b3-20e1cc85af77"
+            },
+            "recordedAt": {
+                "S": "2025-06-16T22:00:51.357341"
+            },
+            "name": {
+                "S": "silver-2025-06-16"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-20"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-20T22:00:29Z"
+            },
+            "price": {
+                "N": "36.047001"
+            },
+            "id": {
+                "S": "be23cba5-16fb-4fef-8408-5c3ab1af23c2"
+            },
+            "recordedAt": {
+                "S": "2025-06-20T22:00:51.707351"
+            },
+            "name": {
+                "S": "silver-2025-06-20"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-18"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-18T22:00:30Z"
+            },
+            "price": {
+                "N": "4.439864"
+            },
+            "id": {
+                "S": "0889f04f-864a-4227-8872-1fc71d43117c"
+            },
+            "recordedAt": {
+                "S": "2025-06-18T22:00:51.709721"
+            },
+            "name": {
+                "S": "copper-2025-06-18"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-26"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-26T22:00:51Z"
+            },
+            "price": {
+                "N": "4.555585"
+            },
+            "id": {
+                "S": "5176bf6f-421e-4807-93d1-8f1f988de38a"
+            },
+            "recordedAt": {
+                "S": "2025-06-26T22:00:51.545196"
+            },
+            "name": {
+                "S": "copper-2025-06-26"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-20"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-20T22:00:31Z"
+            },
+            "price": {
+                "N": "1067"
+            },
+            "id": {
+                "S": "20211bc8-f8c4-44b3-8409-9c86ab40a818"
+            },
+            "recordedAt": {
+                "S": "2025-06-20T22:00:51.707351"
+            },
+            "name": {
+                "S": "palladium-2025-06-20"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-23"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-23T22:00:17Z"
+            },
+            "price": {
+                "N": "3369.969971"
+            },
+            "id": {
+                "S": "0647a66a-176f-4361-bf77-d3cf4e933c1b"
+            },
+            "recordedAt": {
+                "S": "2025-06-23T22:00:51.341767"
+            },
+            "name": {
+                "S": "gold-2025-06-23"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-26"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-26T22:00:50Z"
+            },
+            "price": {
+                "N": "2411.22998"
+            },
+            "id": {
+                "S": "a40c535e-b588-42f5-9a75-ccb42e144844"
+            },
+            "recordedAt": {
+                "S": "2025-06-26T22:00:51.545196"
+            },
+            "name": {
+                "S": "ethereum-2025-06-26"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-20"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-20T22:00:31Z"
+            },
+            "price": {
+                "N": "2419.669922"
+            },
+            "id": {
+                "S": "62d572f7-af96-4fd2-87d8-b5857d29609a"
+            },
+            "recordedAt": {
+                "S": "2025-06-20T22:00:51.707351"
+            },
+            "name": {
+                "S": "ethereum-2025-06-20"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-24"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-24T22:00:24Z"
+            },
+            "price": {
+                "N": "4.555313"
+            },
+            "id": {
+                "S": "6cd4b72c-16f2-4de5-9b06-4ce455692b29"
+            },
+            "recordedAt": {
+                "S": "2025-06-24T22:00:51.417356"
+            },
+            "name": {
+                "S": "copper-2025-06-24"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-23"
+            },
+            "symbol": {
+                "S": "XAG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "silver"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-23T22:00:17Z"
+            },
+            "price": {
+                "N": "36.151001"
+            },
+            "id": {
+                "S": "760d7551-e4d1-40dc-85f4-bd71fc4d0d90"
+            },
+            "recordedAt": {
+                "S": "2025-06-23T22:00:51.341767"
+            },
+            "name": {
+                "S": "silver-2025-06-23"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-18"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-18T22:00:30Z"
+            },
+            "price": {
+                "N": "1058"
+            },
+            "id": {
+                "S": "4e2a6a4f-54cf-4fb8-8add-bfb8f07116c9"
+            },
+            "recordedAt": {
+                "S": "2025-06-18T22:00:51.709721"
+            },
+            "name": {
+                "S": "palladium-2025-06-18"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-23"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-23T22:00:21Z"
+            },
+            "price": {
+                "N": "1095"
+            },
+            "id": {
+                "S": "8c0ad97e-b6c5-4200-aae9-dba930d6b049"
+            },
+            "recordedAt": {
+                "S": "2025-06-23T22:00:51.341767"
+            },
+            "name": {
+                "S": "palladium-2025-06-23"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-26"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-26T22:00:49Z"
+            },
+            "price": {
+                "N": "107016.546875"
+            },
+            "id": {
+                "S": "4d39f36a-c69f-42ba-bea4-ff69ac8ef651"
+            },
+            "recordedAt": {
+                "S": "2025-06-26T22:00:51.545196"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-26"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-16"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-16T22:00:27Z"
+            },
+            "price": {
+                "N": "1051"
+            },
+            "id": {
+                "S": "7b3c6410-dddb-4ba6-9f48-c0b4ad376198"
+            },
+            "recordedAt": {
+                "S": "2025-06-16T22:00:51.357341"
+            },
+            "name": {
+                "S": "palladium-2025-06-16"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-25"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-25T22:00:48Z"
+            },
+            "price": {
+                "N": "2429.870117"
+            },
+            "id": {
+                "S": "ee43b3c3-285c-492d-92c1-6ece4ad9becb"
+            },
+            "recordedAt": {
+                "S": "2025-06-25T22:00:51.437024"
+            },
+            "name": {
+                "S": "ethereum-2025-06-25"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-25"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-25T22:00:47Z"
+            },
+            "price": {
+                "N": "3333.110107"
+            },
+            "id": {
+                "S": "4e39ac68-5e7a-43b2-b535-0f89d11fe2c0"
+            },
+            "recordedAt": {
+                "S": "2025-06-25T22:00:51.437024"
+            },
+            "name": {
+                "S": "gold-2025-06-25"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-19"
+            },
+            "symbol": {
+                "S": "XAU"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "gold"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-19T22:00:29Z"
+            },
+            "price": {
+                "N": "3373.5"
+            },
+            "id": {
+                "S": "feac323b-4cd3-45de-a984-7d9ea3d87f98"
+            },
+            "recordedAt": {
+                "S": "2025-06-19T22:00:51.731754"
+            },
+            "name": {
+                "S": "gold-2025-06-19"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-23"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-23T22:00:22Z"
+            },
+            "price": {
+                "N": "4.529725"
+            },
+            "id": {
+                "S": "a0687f06-fa83-4383-ad87-c2327223e7e4"
+            },
+            "recordedAt": {
+                "S": "2025-06-23T22:00:51.341767"
+            },
+            "name": {
+                "S": "copper-2025-06-23"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-20"
+            },
+            "symbol": {
+                "S": "HG"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "copper"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-20T22:00:32Z"
+            },
+            "price": {
+                "N": "4.460824"
+            },
+            "id": {
+                "S": "024b6aad-53bf-45ad-94c4-f34dbb40e5b8"
+            },
+            "recordedAt": {
+                "S": "2025-06-20T22:00:51.707351"
+            },
+            "name": {
+                "S": "copper-2025-06-20"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-26"
+            },
+            "symbol": {
+                "S": "XPD"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "palladium"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-26T22:00:50Z"
+            },
+            "price": {
+                "N": "1153"
+            },
+            "id": {
+                "S": "6e7627b5-050d-4705-a313-61b62c31c503"
+            },
+            "recordedAt": {
+                "S": "2025-06-26T22:00:51.545196"
+            },
+            "name": {
+                "S": "palladium-2025-06-26"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-19"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-19T22:00:30Z"
+            },
+            "price": {
+                "N": "104305.140625"
+            },
+            "id": {
+                "S": "10f33759-0a66-41ab-bc90-4e1bce26d629"
+            },
+            "recordedAt": {
+                "S": "2025-06-19T22:00:51.731754"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-19"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-23"
+            },
+            "symbol": {
+                "S": "BTC"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "bitcoin"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-23T22:00:18Z"
+            },
+            "price": {
+                "N": "103752.210938"
+            },
+            "id": {
+                "S": "d8f99e56-2947-470e-95c6-4facb2f8890f"
+            },
+            "recordedAt": {
+                "S": "2025-06-23T22:00:51.341767"
+            },
+            "name": {
+                "S": "bitcoin-2025-06-23"
+            }
+        },
+        {
+            "date": {
+                "S": "2025-06-18"
+            },
+            "symbol": {
+                "S": "ETH"
+            },
+            "sourceUpdatedAtReadable": {
+                "S": "a few seconds ago"
+            },
+            "asset_name": {
+                "S": "ethereum"
+            },
+            "sourceUpdatedAt": {
+                "S": "2025-06-18T22:00:29Z"
+            },
+            "price": {
+                "N": "2536.629883"
+            },
+            "id": {
+                "S": "b2978038-ac8a-4ced-a76b-40db0962e8f2"
+            },
+            "recordedAt": {
+                "S": "2025-06-18T22:00:51.709721"
+            },
+            "name": {
+                "S": "ethereum-2025-06-18"
+            }
+        }
+    ],
+    "Count": 54,
+    "ScannedCount": 54,
+    "ConsumedCapacity": null
+}
