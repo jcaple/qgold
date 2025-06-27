@@ -332,7 +332,7 @@ All prices were last updated just a few seconds ago, around 16:14 UTC today.
 
 ### model_financial_projections
 
-This tool was scratching an itch.  It helps to provide some idea of annual growth of a principal amount over a 30 year period, as well as what the impact of certain withdrawl rates versus growth rates might affect that principal over the same period.  The tool also allows you to simulate random growth interest rates over the thirty year period as well for, perhaps, a more 'Chaos Monkeys' look at possible money scenarios.
+This MCP tool was just scratching an itch.  It helps to provide some idea of annual growth of a principal amount over a 30 year period, as well as what the impact of certain withdrawl rates versus growth rates might affect that principal over the same period.  The tool also allows you to simulate random growth interest rates over the thirty year period as well for, perhaps, a more 'Chaos Monkeys' look at possible money scenarios.
 
 There are better ways to model these scenarios, probably.  For example, the S&P 500 has probably experienced fewer down years than what the random generation will throw out on a given run, so this model is probably too pessimistic (but interesting nonetheless).  Furthermore, running these scenarios in a Monte Carlo simulation and cacheing results in REDIS or DynamoDB might also provide some benefciail Q analysis as well, TBD.
 
