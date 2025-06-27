@@ -4,10 +4,14 @@ This project provides an MCP Server that can be plugged in to LLM tools, like th
 
 ## Architecture
 
-- **AWS Lambda**: Executes code to fetch price data for multiple assets and stores in DynamoDB
-- **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 22:00 PM UTC/6pm EST
+![alt text](arch-diagram.png "QGold Architecture")
+
+- **AWS Lambda**: 
+  -- **qgold-api-data-function**: Executes code to fetch price data for multiple assets and stores in DynamoDB
+  -- **qgold-quote-analysis-function**: The MCP Lambda proxy responsible for retrieving data from DynamoDB for analysis
+- **EventBridge Scheduler**: Triggers the Lambda function on weekdays (M-F) at 22:00 PM UTC/5pm EST
 - **DynamoDB**: Stores the retrieved price data with a date-based index for easy querying
-- **Q CLI**: Uses this MCP Server as a cli tool to learn about asset prices stored in DynamoDB
+- **Q CLI**: LLM client for MCP Server as a nlp tool for learning about asset prices stored in DynamoDB
 
 The 'functions' directory contains the AWS lambda functions.
 
@@ -28,7 +32,7 @@ The Lambda function fetches price data for the following assets:
 
 ## API Endpoint
 
-The Lambda function makes requests to the following API endpoint for each asset price:
+The qgold-api-data-function Lambda function makes requests to the following external, public API endpoint to fetch asset prices:
 
 ```
 https://api.gold-api.com/price/{symbol}
