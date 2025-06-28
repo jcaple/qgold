@@ -169,6 +169,8 @@ sam delete
 
 This MCP (Model Context Protocol) server provides tools for retrieving currency price information from the QGold Lambda functions.
 
+**NOTE:** Make sure to change directory to 'mcp_server' for the following.
+
 ### Setup
 
 #### Install dependencies:
@@ -184,8 +186,6 @@ uv pip install -r mcp_server/requirements.txt
 ```
 
 ### Using The MCP Server In Q Cli
-
-**NOTE:** Make sure to change directory to 'mcp_server' for the following.
 
 #### Add MCP Server
 
