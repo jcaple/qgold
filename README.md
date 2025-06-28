@@ -185,6 +185,8 @@ uv pip install -r mcp_server/requirements.txt
 
 ### Using The MCP Server In Q Cli
 
+**NOTE:** Make sure to change directory to 'mcp_server' for the following.
+
 #### Add MCP Server
 
 Run the following commands inside the mcp_server directory:
