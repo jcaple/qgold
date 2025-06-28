@@ -1,6 +1,12 @@
 # QGold
 
-This project provides an MCP Server that can be plugged in to LLM tools, like the Q CLI, for natural language questions related to the price performance of certain metal and digital currency assets, like gold, silver and bitcoin, over time.
+QGold is an [MCP Server](https://modelcontextprotocol.io/introduction) facilitating natural language processing and understanding of certain asset prices,
+namely Gold, Silver, Palladium, Copper, Bitcoin and Ethereum.  For kicks, it also includes a simple financial modeling tool to help better understand
+the potential impacts of a 4% (or whatever) withdraw rate from saved principal over time.
+
+This project resulted from participation in the 2025 DEVPOST AWS Lambda Hackathon.
+
+[Here is an intro video](https://youtu.be/2VWR_Ks9h5o?si=tnH6nwCqlyxnhGFB).
 
 ## Architecture
 
