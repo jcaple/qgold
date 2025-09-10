@@ -15,8 +15,8 @@ class DecimalEncoder(json.JSONEncoder):
 
 # Configure logging
 log_level = os.environ.get('LOG_LEVEL', 'INFO')
-logging.basicConfig(level=getattr(logging, log_level))
 logger = logging.getLogger()
+logger.setLevel(getattr(logging, log_level))
 
 # Initialize DynamoDB client
 dynamodb = boto3.resource('dynamodb')
