@@ -75,7 +75,7 @@ Resources:
       CodeUri: functions/quote_retrieval
       Description: Retrieve quotes from API and store in DynamoDB
       Handler: lambda_function.lambda_handler
-      Runtime: python3.10
+      Runtime: python3.14
       Timeout: 60
       MemorySize: 128
       Environment:
@@ -103,7 +103,7 @@ Resources:
       CodeUri: functions/quote_analysis
       Description: Retrieve records from DynamoDB based on name and date range
       Handler: lambda_function.lambda_handler
-      Runtime: python3.10
+      Runtime: python3.14
       Timeout: 30
       MemorySize: 128
       Environment:
